@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MelBlush - Home</title>
+  <!-- Bootstrap CSS and Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Make hero section take up nearly all viewport height minus footer */
+    .hero-section {
+      min-height: calc(100vh - 90px - 70px); /* Header/footer height approximate */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative; /* Add this line */
+    }
+    @media (max-width: 768px) {
+      .hero-section {
+        min-height: calc(100vh - 90px - 100px);
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      .makeup-display-img {
+        max-width: 90vw !important;
+        height: auto !important;
+      }
+    }
+    /* Center welcome text and enlarge */
+    .welcome-title {
+      font-size: 3.2rem;
+      color: #ff4d88;
+      font-weight: 900;
+      margin-bottom: 0.7em;
+      text-align: center;
+    }
+    .welcome-lead {
+      font-size: 1.3rem;
+      margin-bottom: 2em;
+      text-align: center;
+    }
+    /* Stretch and enlarge the makeup display image */
+    .makeup-display-img {
+      width: 100%;
+      max-width: 650px;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 22px;
+      box-shadow: 0 4px 22px rgba(255,77,136,0.12);
+      display: block;
+      margin: 0 auto;
+      background: #fff;
+    }
+    /* Shop Now and Add to Cart buttons - pink color */
+    .btn-custom {
+      background: #ff4d88;
+      color: white;
+      border-radius: 6px;
+      font-weight: 600;
+      border: none;
+      transition: background 0.2s, box-shadow 0.2s;
+      box-shadow: 0 2px 8px rgba(255,77,136,0.15);
+    }
+    .btn-custom:hover, .btn-custom:focus {
+      background: #e63e76 !important;
+      color: #fff !important;
+    }
+    /* Sticky footer always at bottom */
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .footer {
+      background: #ff4d88;
+      margin-top: auto;
+      box-shadow: 0 -2px 12px rgba(255,77,136,0.08);
+      width: 100%;
+    }
+
+    /* Style for the logo circle */
+    .logo-circle {
+      position: absolute;
+      top: 130px; /* Adjust as needed */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 300px; /* Adjust size as needed */
+      height: 300px; /* Adjust size as needed */
+      border-radius: 50%;
+      background-color: #fff; /* Or any color you prefer */
+      box-shadow: 0 4px 22px rgba(255,77,136,0.25);
+      z-index: 10; /* Ensure it's above other content */
+    }
+    .logo-circle img {
+      display: block;
+      margin: 0 auto;
+      margin-top: 5%; /* Adjust this value to center the image vertically */
+    }
+    .container.text-center.hero-border-bg {
+      margin-top: 450px; /* Adjust this value to move the content lower */
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background:#ff4d88;">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        <img src="logo.jpg" alt="MelBlush Logo" width="36" height="36" class="me-2 rounded-circle">
+        MelBlush
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<section class="hero-section">
+  <div class="logo-circle">
+    <img src="logo.jpg" alt="MelBlush Logo" width="270" height="270" class="rounded-circle">
+  </div>
+  <div class="container text-center hero-border-bg">
+    <h1 class="welcome-title">Welcome to MelBlush!</h1>
+    <p class="welcome-lead">Your beauty, your rules. Discover our best-selling makeup essentials.</p>
+    <a href="products.html" class="btn btn-lg btn-custom px-4 py-2 mb-4">Shop Now</a>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="footer mt-auto py-3">
+    <div class="container text-center">
+      <p class="mb-1 text-white">&copy; 2025 MelBlush. All Rights Reserved.</p>
+      <small>
+        <b>Contact:</b>
+        <a href="mailto:mhelaipardillo@gmail.com" class="text-white text-decoration-underline">mhelaipardillo@gmail.com</a>
+        &nbsp; | &nbsp;
+        <b>Instagram:</b>
+        <a href="https://instagram.com/mhelai0124" target="_blank" class="text-white text-decoration-underline">@mhelai0124</a>
+      </small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
